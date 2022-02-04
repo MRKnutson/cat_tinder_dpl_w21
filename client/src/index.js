@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import AuthProvider from "./providers/AuthProvider";
 import { initMiddleware } from "devise-axios";
+import CatProvider from "./providers/CatProvider";
 
 initMiddleware();
 
 ReactDOM.render(
   <AuthProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <CatProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </CatProvider>
   </AuthProvider>,
   document.getElementById("root")
 );

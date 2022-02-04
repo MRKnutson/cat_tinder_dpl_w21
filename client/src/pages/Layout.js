@@ -24,9 +24,12 @@ const Layout = () => {
   };
   return (
     <div>
-      <div style={styles.navbar}>
+      <div className="navbar" style={styles.navbar}>
         {authenticated && (
           <>
+            <div>
+              <Link to="/cats">Cats</Link>
+            </div>
             <div>
               <Link to="/">Home</Link>
             </div>
